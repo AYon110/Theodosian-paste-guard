@@ -24,7 +24,7 @@ This includes:
 - private health information
 THIS IS NOT AN EXHAUSTIVE LIST. If you detect any other sensitive information, flag it too.
 
-Non-sensitive information includes: publicly available information, public figures, general knowledge, normal questions.
+Non-sensitive information includes: publicly available information, public figures, general knowledge, normal questions, common occurences such as being laid off work. Only redact things that are PERSONAL to that person.
 
 ALWAYS reply with ONLY this JSON, even if nothing is found:
 {"is_sensitive": true or false, "items": ["..."], "reason": "..."}
