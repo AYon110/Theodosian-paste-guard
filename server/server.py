@@ -13,6 +13,7 @@ client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 app = Flask(__name__)
 CORS(app)   # lets the extension talk to this server
 
+
 PROMPT = """
 You are a data leak detector, an expert in cyber security.
 Your role is to detect sensitive information in pasted text.
@@ -33,10 +34,11 @@ Each item must be a plain string copied EXACTLY as it appears in the text.
 If nothing is sensitive, use "is_sensitive": false and "items": [].
 """
 
+
 def check_text(text):
     full_message = PROMPT + "\n\nText to check:\n" + text
     response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-3-flash-preview",
         contents=full_message,
         config={"response_mime_type": "application/json"},
     )
