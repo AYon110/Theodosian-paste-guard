@@ -12,3 +12,4 @@ function emaildetect(text) {
     return text.match(EMAIL) || [];
 
 }
+
