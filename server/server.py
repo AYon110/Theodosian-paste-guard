@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)   # lets the extension talk to this server
 
 PROMPT = """
-...paste your prompt here...
+
 """
 
 def check_text(text):
