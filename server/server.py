@@ -25,9 +25,10 @@ def check_text(text):
     config = {"response_mime_type": "application/json"}
     )
     result = json.loads(response.text)
+    return result
 
 
-    pass
+   
 
 @app.route("/check", methods=["POST"])
 def check():
